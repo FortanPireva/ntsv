@@ -5,5 +5,6 @@ export default {
   NOTE: {
     GETALL: "/notes",
     GET: "/notes/:id",
+    CREATENOTE: "/notes",
   },
 };

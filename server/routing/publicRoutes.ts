@@ -13,5 +13,6 @@ publicRouter.get(routes.REGISTER_ROUTE, accountController.getRegister);
 
 publicRouter.get(routes.NOTE.GET, noteController.getNote);
 publicRouter.get(routes.NOTE.GETALL, noteController.getNotes);
+publicRouter.post(routes.NOTE.CREATENOTE, noteController.createNote);
 
 export default publicRouter;

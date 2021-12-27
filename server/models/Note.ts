@@ -1,10 +1,15 @@
 import BaseEntity from "./BaseEntity";
 class Note extends BaseEntity {
-  private description: string;
-  private name: string;
-  private dateCreated: Date;
-  constructor(name: string, description: string, dateCreated: Date) {
-    super();
+  public description: string;
+  public name: string;
+  public dateCreated: Date;
+  constructor(
+    id: number,
+    name: string,
+    description: string,
+    dateCreated: Date
+  ) {
+    super(id);
     this.description = description;
     this.name = name;
     this.dateCreated = dateCreated;

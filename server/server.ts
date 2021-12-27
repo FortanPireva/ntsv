@@ -15,18 +15,21 @@ const isProduction = process.env.NODE_ENV === "production";
 // if (!isProduction) {
 //   app.use(errorhandler());
 // }
+app.use(express.json());
+
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(docs));
 
 app.use("/api", routes.public);
 
 app.get("/", (req, res) => {
-  var note = new Note(
-    "note1",
-    (Math.random() * 1000).toString(),
-    new Date(Date.now())
-  );
+  // var note = new Note(
+  //   "note1",
+  //   (Math.random() * 1000).toString(),
+  //   new Date(Date.now())
+  // );
 
-  res.send(note.toString());
+  // res.send(note.toString());
+  res.send("Hi stranger");
 });
 /// catch 404 and forward to error handler
 app.use(function (
